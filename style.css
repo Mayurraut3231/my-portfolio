@@ -191,56 +191,7 @@ span{
     box-shadow: 0 0 25px #b74b4b;
 }
 
-.typing-text{
-    font-size: 34px;
-    font-weight: 600;
-    min-width: 280px;
-}
 
-.typing-text span{
-    position: relative;
-}
-
-.typing-text span::before{
-    content: "software Developer";
-    color: #b74b4b;
-    animation: words 20s infinite;
-}
-
-.typing-text span::after{
-    content: "";
-    background-color: black;
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 3px solid black;
-    right: -8;
-    animation: cursor 0.6s infinite;
-}
-
-@keyframes cursor{
-    to{
-        border-left: 3px solid #b74b4b;
-    }
-}
-
-@keyframes words{
-    0%, 20%{
-        content: "Web Developer";
-    }
-    21%, 40%{
-        content: "Developer";
-    }
-    41%, 60%{
-        content: "Web Designer";
-    }
-    61%, 80%{
-        content: "Youtuber";
-    }
-    81%, 100%{
-        content: "Gamer";
-    }
-}
 
 @media (max-width: 1000px){
     .home{
@@ -605,7 +556,474 @@ span{
   transition: background 0.2s, color 0.2s;
 }
 .hire-me .btn.hire-me-btn:hover {
-  background: #fff;
+  background: #ffffff;
   color: #b74b4b;
 }
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
 
+.variable-proximity {
+  font-family: "Roboto Flex", sans-serif;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+.certificates {
+  background: #161616;
+  color: #fff;
+  padding: 5rem 9%;
+  border-radius: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 6rem;
+  box-shadow: 0 0 18px #b74b4b50;
+  text-align: center;
+}
+
+.certificates .section-title {
+  font-size: 3rem;
+  color: #b74b4b;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+
+.certificates-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.certificate-card {
+  background: #0d0d0d;
+  border: 1px solid #b74b4b60;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  width: 300px;
+  box-shadow: 0 0 8px #b74b4b30;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card img {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #b74b4b40;
+}
+
+.certificate-card h3 {
+  color: #b74b4b;
+  font-size: 1.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.certificate-card p {
+  font-size: 1.4rem;
+  color: #ddd;
+}
+
+.certificate-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 0 25px #b74b4b70;
+}
+
+@media (max-width: 800px) {
+  .certificates-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* ===== Rotating Flip Animation (I'm a Web Developer...) ===== */
+#container {
+  color: #b74b4b;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+#flip {
+  height: 45px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#flip > div > div {
+  color: #fff;
+  padding: 4px 12px;
+  height: 45px;
+  margin-bottom: 45px;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+#flip div:first-child {
+  animation: show 6s linear infinite;
+}
+
+#flip div:nth-child(1) div { background: #b74b4b; }
+#flip div:nth-child(2) div { background: #4ec7f3; }
+#flip div:nth-child(3) div { background: #42c58a; }
+#flip div:nth-child(4) div { background: #DC143C; }
+
+@keyframes show {
+  0% { margin-top: -180px; }
+  5% { margin-top: -135px; }
+  25% { margin-top: -135px; }
+  30% { margin-top: -90px; }
+  50% { margin-top: -90px; }
+  55% { margin-top: -45px; }
+  75% { margin-top: -45px; }
+  80% { margin-top: 0px; }
+  99.99% { margin-top: 0px; }
+  100% { margin-top: -180px; }
+}
+
+
+body {
+	background: black;
+}
+
+.letter-image {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+}
+
+.animated-mail {
+	position: absolute;
+	height: 150px;
+	width: 200px;
+	-webkit-transition: .4s;
+	-moz-transition: .4s;
+	transition: .4s;
+	
+	.body {
+		position: absolute;
+		bottom: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 0 100px 200px;
+		border-color: transparent transparent #e95f55 transparent;
+		z-index: 2;
+	}
+	
+	.top-fold {
+		position: absolute;
+		top: 50px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 50px 100px 0 100px;
+		-webkit-transform-origin: 50% 0%;
+		-webkit-transition: transform .4s .4s, z-index .2s .4s;
+		-moz-transform-origin: 50% 0%;
+		-moz-transition: transform .4s .4s, z-index .2s .4s;
+		transform-origin: 50% 0%;
+		transition: transform .4s .4s, z-index .2s .4s;
+		border-color: #cf4a43 transparent transparent transparent;
+		z-index: 2;
+	}
+	
+	.back-fold {
+		position: absolute;
+		bottom: 0;
+		width: 200px;
+		height: 100px;
+		background: #cf4a43;
+		z-index: 0;
+	}
+	
+	.left-fold {
+		position: absolute;
+		bottom: 0;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 50px 0 50px 100px;
+		border-color: transparent transparent transparent #e15349;
+		z-index: 2;
+	}
+	
+	.letter {
+		left: 20px;
+		bottom: 0px;
+		position: absolute;
+		width: 160px;
+		height: 60px;
+		background: white;
+		z-index: 1;
+		overflow: hidden;
+		-webkit-transition: .4s .2s;
+		-moz-transition: .4s .2s;
+		transition: .4s .2s;
+		
+		.letter-border {
+			height: 10px;
+			width: 100%;
+      background: repeating-linear-gradient(
+        -45deg,
+        #cb5a5e,
+        #cb5a5e 8px,
+        transparent 8px,
+        transparent 18px
+      );
+		}
+		
+		.letter-title {
+			margin-top: 10px;
+			margin-left: 5px;
+			height: 10px;
+			width: 40%;
+			background: #cb5a5e;
+		}
+		.letter-context {
+			margin-top: 10px;
+			margin-left: 5px;
+			height: 10px;
+			width: 20%;
+			background: #cb5a5e;
+		}
+		
+		.letter-stamp {
+			margin-top: 30px;
+			margin-left: 120px;
+			border-radius: 100%;
+			height: 30px;
+			width: 30px;
+			background: #cb5a5e;
+			opacity: 0.3;
+		}
+	}
+}
+
+.shadow {
+	position: absolute;
+	top: 200px;
+	left: 50%;
+	width: 400px;
+	height: 30px;
+	transition: .4s;
+	transform: translateX(-50%);
+	-webkit-transition: .4s;
+	-webkit-transform: translateX(-50%);
+	-moz-transition: .4s;
+	-moz-transform: translateX(-50%);
+	
+	border-radius: 100%;
+	background: radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.0), rgba(0,0,0,0.0));
+}
+
+	.letter-image:hover {
+		.animated-mail {
+			transform: translateY(50px);
+			-webkit-transform: translateY(50px);
+			-moz-transform: translateY(50px);
+		}
+		
+		.animated-mail .top-fold {
+			transition: transform .4s, z-index .2s;
+			transform: rotateX(180deg);
+			-webkit-transition: transform .4s, z-index .2s;
+			-webkit-transform: rotateX(180deg);
+			-moz-transition: transform .4s, z-index .2s;
+			-moz-transform: rotateX(180deg);
+			z-index: 0;
+		}
+		
+		.animated-mail .letter {
+			height: 180px;
+		}
+		
+		.shadow {
+			width: 250px;
+		}
+	}
+  .letter-image {
+  margin: 0 auto 3rem auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: none;
+}
+/* ⚡ Background Lightning Animation */
+.animation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* keep it behind everything */
+  background: radial-gradient(circle at bottom right, black 0%, #000000 100%);
+}
+
+.lightning-container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: flex;
+  transform: translateY(-50%);
+}
+
+.lightning {
+  position: absolute;
+  display: block;
+  height: 12px;
+  width: 12px;
+  border-radius: 12px;
+  transform-origin: 6px 6px;
+  animation-name: woosh;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950);
+  animation-direction: alternate;
+}
+.lightning.white {
+  background-color: white;
+  box-shadow: 0px 50px 50px 0px rgba(255,255,255,0.2);
+}
+.lightning.red {
+  background-color: #b74b4b;
+  box-shadow: 0px 50px 50px 0px rgba(183,75,75,0.3);
+  animation-delay: 0.2s;
+}
+
+/* Explosion shapes */
+.boom-container {
+  position: absolute;
+  display: flex;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  align-items: center;
+  transform: translateY(-50%);
+}
+.boom-container.second {
+  left: 65%;
+  top: 60%;
+}
+.boom-container .shape {
+  position: relative;
+  opacity: 0;
+  transform-origin: center center;
+}
+
+/* Triangles */
+.shape.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  transform-origin: 50% 80%;
+  animation: boom-triangle 3s ease-out infinite;
+  margin-left: -15px;
+  border-width: 0 2.5px 5px 2.5px;
+  border-color: transparent transparent #42e599 transparent;
+}
+.shape.triangle.big {
+  margin-left: -25px;
+  border-width: 0 5px 10px 5px;
+  border-color: transparent transparent #fade28 transparent;
+  animation: boom-triangle-big 3s ease-out infinite;
+}
+
+/* Circles and Discs */
+.shape.disc {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #d15ff4;
+  animation: boom-disc 3s ease-out infinite;
+}
+.shape.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 1px solid white;
+  animation: boom-circle 3s ease-out infinite;
+  margin-left: -30px;
+}
+.shape.circle.big {
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  margin-left: 0px;
+  animation: boom-circle 3s ease-out infinite;
+}
+
+/* Animations */
+@keyframes woosh {
+  0% { width: 12px; transform: translate(0,0) rotate(-35deg); }
+  15% { width: 50px; }
+  30% { width: 12px; transform: translate(214px, -150px) rotate(-35deg); }
+  30.1% { transform: translate(214px, -150px) rotate(46deg); }
+  50% { width: 110px; }
+  70% { width: 12px; transform: translate(500px, 150px) rotate(46deg); }
+  70.1% { transform: translate(500px, 150px) rotate(-37deg); }
+  85% { width: 50px; }
+  100% { width: 12px; transform: translate(700px, 0) rotate(-37deg); }
+}
+
+@keyframes boom-circle {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  30% { opacity: 0; transform: scale(3); }
+}
+@keyframes boom-triangle-big {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  40% { opacity: 0; transform: scale(2.5) translate(50px, -50px) rotate(360deg); }
+}
+@keyframes boom-triangle {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  30% { opacity: 0; transform: scale(3) translate(20px, 40px) rotate(360deg); }
+}
+@keyframes boom-disc {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  40% { opacity: 0; transform: scale(2) translate(-70px, -30px); }
+}
+.lightning.red { background-color: #b74b4b; }
+/* === GLOBAL BACKGROUND ANIMATION === */
+body {
+  margin: 0;
+  background: linear-gradient(to bottom right, black 0%, black 100%);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Keeps lightning animation behind everything */
+.animation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
