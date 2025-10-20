@@ -9,6 +9,28 @@
     <title>Portfolio Website</title>
 </head>
 <body>
+  <div class="animation-container">
+    <div class="lightning-container">
+      <div class="lightning white"></div>
+      <div class="lightning red"></div>
+    </div>
+
+    <div class="boom-container">
+      <div class="shape circle white"></div>
+      <div class="shape circle big white"></div>
+      <div class="shape triangle big yellow"></div>
+      <div class="shape disc"></div>
+    </div>
+
+    <div class="boom-container second">
+      <div class="shape circle white"></div>
+      <div class="shape circle big white"></div>
+      <div class="shape triangle big yellow"></div>
+      <div class="shape disc"></div>
+    </div>
+  </div>
+
+
     
     <header>
         <a href="#" class="logo"></a>
@@ -18,6 +40,8 @@
             <a href="#skills" >Skills</a>
             <a href="#education" >Education</a>
             <a href="#contacts" >Contact</a>
+            <a href="#certificates">Certificates</a>
+
         </nav>
     </header>
     <section class="home">
@@ -26,7 +50,16 @@
         </div>
         <div class="home-content">
             <h1>Hi, It's <span>Mayur</span></h1>
-            <h3 class="typing-text">I'm a <span></span></h3>
+            <div id="container">
+  I'm a 
+  <div id="flip">
+    <div><div>Web Developer</div></div>
+    <div><div>Developer</div></div>
+    <div><div>Youtuber</div></div>
+    <div><div>Gamer</div></div>
+  </div>
+</div>
+
             <p>Hi!, Im Mayur passionate Computer Engineering Student at Pravara Rural Engineering College Loni</p>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/mayur-raut-69a792315/"><i class="fa-brands fa-linkedin"></i></a>
@@ -94,22 +127,49 @@
 </section>
 <section class="contacts" id="contacts">
   <h2 class="section-title">Contact Me</h2>
-  <div class="contact-content"
-    <form class="contact-form">
-      <div class="input-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="input-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="input-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
+  <!-- Animated Mail Icon -->
+<div class="letter-image">
+  <div class="animated-mail">
+    <div class="back-fold"></div>
+    <div class="letter">
+      <div class="letter-border"></div>
+      <div class="letter-title"></div>
+      <div class="letter-context"></div>
+      <div class="letter-stamp"></div>
+    </div>
+    <div class="top-fold"></div>
+    <div class="body"></div>
+    <div class="left-fold"></div>
+  </div>
+  <div class="shadow"></div>
+</div>
+
+ <div class="contact-content">
+  <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="form">
+
+    <!-- Web3Forms hidden configuration -->
+    <input type="hidden" name="access_key" value="577fc2b2-2959-4210-b779-d81bb6e48fce">
+    <input type="hidden" name="subject" value="New Message from Portfolio">
+    <input type="hidden" name="from_name" value="Mayur Raut Portfolio">
+    <input type="hidden" name="to_email" value="mayurkr2006@gmail.com">  <!-- ✅ your email -->
+    <input type="checkbox" name="botcheck" style="display:none;">
+
+    <!-- User visible fields -->
+    <div class="input-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="input-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</div>
+
+
     <div class="contact-details">
       <p><strong>Email:</strong> mayurkr2006@gmail.com</p>
       <p><strong>Phone:</strong> +91-8484975311</p>
@@ -132,6 +192,21 @@
     <!-- You can add more timeline items for past education if needed -->
   </div>
 </section>
+</section>
+
+<!-- Certificates Section -->
+<section class="certificates" id="certificates">
+  <h2 class="section-title">My Certificates</h2>
+  <div class="certificates-container">
+    <!-- Example Certificate Cards -->
+    <div class="certificate-card">
+      <img src="certificate1.jpg" alt="NPTL Certificate">
+      <h3>Python For Data Science (NPTL)</h3>
+      <p>I got nptl Elite Certificate</p>
+    </div>
+
+   
+
 <section class="hire-me" id="hire-me">
   <h2 class="section-title">Hire Me</h2>
   <p>
